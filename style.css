@@ -125,12 +125,15 @@ button {
         display: block;
         padding: 25px;
     }
+    .fa-xmark:before {
+        display: none;
+    }
     .img-logo-mobile img {
         display: block;
         width: 65px;
         height: 48px;
         margin-right: 40px;
-        padding: 15px;
+        padding: 20px;
     }
     .img-logo img {
         display: none;
@@ -140,10 +143,25 @@ button {
         font-size: 30px;
         justify-content: space-evenly;
     }
-    .link-global {
+    .link-global{
+        display: none;
         flex-direction: column;
         align-items: baseline;
         margin-left: 40px;
+    }
+    .bars {
+        background-color: white;
+        border: none;
+        padding: 0;
+    }
+    .bars:checked + .link-global {
+        display: block;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 40px;
+    }
+    .bars:not(:checked) + .link-global {
+        display: none;
     }
     .link-categories {
         display: flex;
